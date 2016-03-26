@@ -28,7 +28,7 @@ local function raise_error()
 end
 
 local function reload(...)
-	local args = SERVICE_NAME .. " " .. table.concat({...}, " ")
+	local args = "snaxd "..SERVICE_NAME .. " " .. table.concat({...}, " ")
 	local L = core.reload(args)
 	core.link(L)
 	raise_error()
